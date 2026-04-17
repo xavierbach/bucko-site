@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0F172A" />
+  <title>Bucko — Privacy Policy</title>
+  <meta name="description" content="How the Bucko app handles your information. Short answer: it doesn't leave your device." />
+
+  <meta property="og:title" content="Bucko — Privacy Policy" />
+  <meta property="og:description" content="No accounts. No servers. No analytics. Everything you enter stays on your device." />
+  <meta property="og:image" content="https://getbucko.com/assets/icon.png" />
+  <meta property="og:url" content="https://getbucko.com/privacy/" />
+  <meta property="og:type" content="article" />
+
+  <link rel="icon" type="image/png" href="/assets/favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="/" class="brand">
+        <img src="/assets/icon.png" alt="" width="36" height="36" />
+        <span>BUCKO</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/#features">Features</a>
+        <a href="/#how">How it works</a>
+        <a href="/#faq">FAQ</a>
+      </nav>
+      <a href="/#download" class="btn btn-primary btn-small">Get the app</a>
+    </div>
+  </header>
+
+  <main class="doc-page">
+    <div class="wrap">
+      <header class="doc-head">
+        <span class="eyebrow">Legal</span>
+        <h1>Privacy Policy</h1>
+        <p class="doc-meta">Effective 17 April 2026 · Last updated 17 April 2026</p>
+      </header>
+
+      <div class="doc-body">
+        <p>This privacy policy describes how the Bucko mobile application ("Bucko", "the app", "we", "our") handles information. Bucko is published by Thorley Park. It is available on Apple iOS and Google Android.</p>
+        <p>We designed Bucko to be <strong>local-first</strong>: the app does not have a user account system, does not transmit your data to our servers, and does not include any third-party analytics, advertising, or tracking SDKs.</p>
+
+        <div class="doc-callout">
+          <p><strong>The short version:</strong> No accounts. No servers. No analytics. No tracking. Everything you enter stays on your device. We do not see it.</p>
+        </div>
+
+        <nav class="doc-toc" aria-label="On this page">
+          <div class="doc-toc-title">On this page</div>
+          <ol>
+            <li><a href="#stored">Stored on your device</a></li>
+            <li><a href="#not-collected">What we do not collect</a></li>
+            <li><a href="#permissions">Permissions</a></li>
+            <li><a href="#leaves">How data leaves your device</a></li>
+            <li><a href="#controls">Your controls</a></li>
+            <li><a href="#kids">Children's privacy</a></li>
+            <li><a href="#security">Security</a></li>
+            <li><a href="#changes">Changes</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#jurisdiction">Jurisdictions</a></li>
+          </ol>
+        </nav>
+
+        <h2 id="stored">Information stored on your device</h2>
+        <p>When you use Bucko, the following information is stored locally on your device using the operating system's standard app storage (iOS App Sandbox / Android App-Specific Storage):</p>
+        <ul>
+          <li>Names you choose for each child profile (first name or nickname).</li>
+          <li>An icon and colour you choose for each child profile.</li>
+          <li>The name and icon you choose for each child's reward-points currency.</li>
+          <li>The chores you configure (name, icon, payout amount, threshold, weekly cap).</li>
+          <li>Your tap history per chore per week (which chores have been ticked off, how many points have been awarded).</li>
+          <li>Whether each week has been ended and marked as paid.</li>
+        </ul>
+        <p>This information is stored using <code>AsyncStorage</code>, which on iOS is backed by the App Sandbox and on Android by App-Specific Storage. It is included in your device's standard backup (iCloud Backup on iOS, Google Auto Backup on Android) according to your device's backup settings.</p>
+        <p>We do not have access to this information. It does not leave your device unless <strong>you</strong> choose to export it (see "Your controls" below) or unless your device's backup system uploads it to your own iCloud or Google account.</p>
+
+        <h2 id="not-collected">Information we do not collect</h2>
+        <p>We want to be explicit. Bucko does <strong>not</strong> collect, transmit, store on our servers, or share with any third party:</p>
+        <ul>
+          <li>Your name, email address, phone number, or any contact information.</li>
+          <li>Your child's last name, date of birth, school, address, photographs, or biometric data.</li>
+          <li>Your device's IP address, advertising identifier (IDFA / AAID), or hardware identifiers.</li>
+          <li>Crash logs, usage analytics, performance telemetry, or session recordings.</li>
+          <li>Location data of any kind.</li>
+          <li>Microphone, camera, contacts, calendar, or photo library data.</li>
+          <li>Payment or financial information. The dollar values you assign to chores are local labels for your own household accounting and never leave your device.</li>
+        </ul>
+
+        <h2 id="permissions">Permissions Bucko requests</h2>
+        <p>Bucko requests <strong>no runtime permissions</strong> at the time of this writing. The app does not access your microphone, camera, location, contacts, calendar, photos, motion sensors, or notifications.</p>
+        <p>If a future version of Bucko adds a feature that requires a permission (for example, optional iCloud or Google Drive sync, or local notifications for chore reminders), we will update this policy and the app will request that permission from you at the moment it is needed.</p>
+
+        <h2 id="leaves">How your data leaves your device</h2>
+        <p>Your data only leaves your device in three scenarios, all of which are under your control:</p>
+        <ol>
+          <li><strong>You export it.</strong> The Settings screen includes an export action that produces a JSON file containing your app data. You decide where that file goes (Files app, AirDrop, email, Google Drive, etc.). We do not see it.</li>
+          <li><strong>You import it on another device.</strong> If you transfer that JSON file to another device and import it, your data lives on that device too.</li>
+          <li><strong>Your operating system backs it up.</strong> If you have iCloud Backup (iOS) or Google Auto Backup (Android) enabled, your app data is included in those backups according to Apple's and Google's policies. Those backups go to <strong>your</strong> Apple or Google account, not to us.</li>
+        </ol>
+
+        <h2 id="controls">Your controls</h2>
+        <ul>
+          <li><strong>View your data.</strong> Everything is visible inside the app.</li>
+          <li><strong>Export your data.</strong> Settings → Export Data produces a JSON file.</li>
+          <li><strong>Delete your data.</strong> Settings → Reset Data wipes everything stored by the app on the device. Uninstalling Bucko also removes all its data.</li>
+          <li><strong>Opt out of backup.</strong> You can exclude Bucko from iCloud Backup or Google Auto Backup in your device's system settings.</li>
+        </ul>
+
+        <h2 id="kids">Children's privacy</h2>
+        <p>Bucko is designed for parents and guardians to manage household chores. It is not directed to children under 13 (or under 16 in jurisdictions where that is the relevant age). We do not knowingly collect any personal information from children, because <strong>we do not collect any personal information from anyone</strong>.</p>
+        <p>A parent using the app may type in a child's first name or nickname as a profile label. That text stays on the parent's device. We never see it.</p>
+
+        <h2 id="security">Security</h2>
+        <p>Because Bucko stores data only on your device using standard operating system storage, the security of that data depends on the security of your device (passcode, biometric lock, OS-level encryption). We recommend keeping your device's operating system up to date and using a passcode.</p>
+
+        <h2 id="changes">Changes to this policy</h2>
+        <p>If we change how Bucko handles information — for example, by adding an optional cloud sync feature — we will update this policy and update the "Last updated" date at the top. For material changes (anything that would expand what data leaves your device), the app will surface the change to you before the new behaviour takes effect.</p>
+
+        <h2 id="contact">Contact</h2>
+        <p>If you have questions about this policy, email us at <a href="mailto:hello@getbucko.com">hello@getbucko.com</a>.</p>
+
+        <h2 id="jurisdiction">Jurisdiction-specific notes</h2>
+        <h3>California residents (CCPA/CPRA)</h3>
+        <p>We do not "sell" or "share" personal information as those terms are defined under California law. Because we do not collect personal information, the rights to access, delete, correct, or opt out of sale do not have any data to act upon — but if you believe we hold information about you, you may contact us at the address above.</p>
+        <h3>EU/UK residents (GDPR/UK GDPR)</h3>
+        <p>Bucko does not process personal data on our infrastructure. The data you enter is stored on your own device and we are not the data controller for that on-device storage. If you have questions, you may contact us at the address above.</p>
+        <h3>Australian residents (Privacy Act 1988)</h3>
+        <p>This policy is intended to comply with the Australian Privacy Principles. Because we do not collect personal information, APP 1–13 obligations regarding collection, use, disclosure, and access are met by the absence of collection.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <img src="/assets/icon.png" alt="" width="28" height="28" />
+        <span>BUCKO</span>
+      </div>
+      <nav class="footer-links" aria-label="Legal">
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/support/">Support</a>
+      </nav>
+      <div class="footer-meta">
+        <span>© <span id="year">2026</span> Bucko. Made for families.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
