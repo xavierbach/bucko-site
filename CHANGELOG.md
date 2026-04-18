@@ -1,5 +1,11 @@
 # Bucko Site Changelog
 
+## [Build 4] — 2026-04-18
+- **New Pricing section** with two side-by-side cards (Free + Bucko Pro), between How-it-works and the CTA. Pro card gets a "Most families" badge, the subtle green glow treatment, and the $9.99/year alt price with 7-day-trial line. Added `#pricing` to the nav.
+- **Copy neatened across the board**. Hero lede, feature paragraphs, steps, CTA body, and all five FAQ answers trimmed — same message, fewer words. No content removed, just less filler.
+- **Removed the red half-circle minus buttons** from the phone mockup in the hero (the `.big-btn-minus` overlays that peeked out of the bottom-left of each big button). Mockup now shows clean circular buttons only.
+- New CSS: `.price-grid`, `.price-card`, `.price-card-featured`, `.price-badge`, `.price`, `.price-amount`, `.price-period`, `.price-alt`, `.price-lede`, `.price-list`.
+
 ## [Build 3] — 2026-04-18
 - **iOS + Android positioning**. Site now reflects that Bucko ships on both stores at the same time:
   - New "iOS · Android" platform strip under the nav
