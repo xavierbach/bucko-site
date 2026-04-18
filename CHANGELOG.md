@@ -1,5 +1,8 @@
 # Bucko Site Changelog
 
+## [Build 7] — 2026-04-18
+- Pro Annual price corrected from $9.99 → **$17.99/year**. Savings line recalculated: **Save 25% vs monthly** (monthly × 12 = $23.88; $23.88 − $17.99 = $5.89 ≈ 25%). Per-month breakdown updated to "$1.50/month, billed yearly". Applied to the pricing card, the FAQ "Is there a subscription?" answer, the `/support/` help page, and the `/terms/` §3a auto-renewing-subscription clause.
+
 ## [Build 6] — 2026-04-18
 - Dropped the tagline "Built for both stores at the same time. iPhone, iPad, Android phones and tablets." from the iOS/Android platform strip. The pill alone carries the message; the sentence was redundant noise.
 

@@ -26,3 +26,4 @@
 - [x] Pricing split into Free / Pro Monthly / Pro Annual with Most-popular + Best-value badges (2026-04-18)
 - [x] Real email capture backend — no longer needed (2026-04-18)
 - [x] Dropped redundant platform-strip tagline (2026-04-18)
+- [x] Pro Annual price set to $17.99/yr; Save 25% math propagated across site (2026-04-18)
