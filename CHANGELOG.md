@@ -1,5 +1,13 @@
 # Bucko Site Changelog
 
+## [Build 8] — 2026-04-19
+- **Copy overhaul** across hero, features, steps, pricing intro, and pricing cards. Shorter, punchier, more parent-voice. Removed "Priority support" from Pro tiers; replaced with "Unlock more icons and themes" + "Backup and sync (coming soon)" / "Best value for families".
+- **Two new FAQs**: "What age is this for?" (4–10) and "Do rewards have to be money?" (no — points can be screen time, treats, etc.).
+- **Trust line** "Built by a dad of two. Used every day in our house." added under the features header.
+- **Visual polish**: feature cards and how-it-works steps are now centre-aligned inside the card (icon, title, body) with `text-wrap: balance` on headings to kill ugly 1-word wraps. Feature grid fixed to a clean 3-col (2-col ≤960px, 1-col ≤640px) with more breathing room.
+- **Pricing cards** centre-aligned card headers (title + price + sub-note + lede); bullet lists stay left-aligned for readability.
+- **Hero store badges** now sit equidistant between the phone mock and the "WHY BUCKO" chip — `.hero` padding-bottom and `#features` padding-top zeroed, badges carry the vertical space on margins.
+
 ## [Build 7] — 2026-04-18
 - Pro Annual price corrected from $9.99 → **$17.99/year**. Savings line recalculated: **Save 25% vs monthly** (monthly × 12 = $23.88; $23.88 − $17.99 = $5.89 ≈ 25%). Per-month breakdown updated to "$1.50/month, billed yearly". Applied to the pricing card, the FAQ "Is there a subscription?" answer, the `/support/` help page, and the `/terms/` §3a auto-renewing-subscription clause.
 

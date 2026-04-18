@@ -27,3 +27,6 @@
 - [x] Real email capture backend — no longer needed (2026-04-18)
 - [x] Dropped redundant platform-strip tagline (2026-04-18)
 - [x] Pro Annual price set to $17.99/yr; Save 25% math propagated across site (2026-04-18)
+- [x] Copy overhaul + two new FAQs (age range, non-money rewards) + "Built by a dad of two" trust line (2026-04-19)
+- [x] Centre-aligned feature cards and how-it-works steps; balanced heading wraps; tightened grid (2026-04-19)
+- [x] Hero store badges re-spaced equidistant between phone mock and features header (2026-04-19)
