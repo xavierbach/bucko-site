@@ -25,3 +25,4 @@
 - [x] Store badges with "COMING SOON" ribbons below hero mockup (2026-04-18)
 - [x] Pricing split into Free / Pro Monthly / Pro Annual with Most-popular + Best-value badges (2026-04-18)
 - [x] Real email capture backend — no longer needed (2026-04-18)
+- [x] Dropped redundant platform-strip tagline (2026-04-18)
