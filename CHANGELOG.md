@@ -1,5 +1,8 @@
 # Bucko Site Changelog
 
+## [Build 6] — 2026-04-18
+- Dropped the tagline "Built for both stores at the same time. iPhone, iPad, Android phones and tablets." from the iOS/Android platform strip. The pill alone carries the message; the sentence was redundant noise.
+
 ## [Build 5] — 2026-04-18
 - **Removed the email-waitlist CTA section entirely.** No more "coming to iPhone and Android" form — the messaging now sits with the store badges themselves.
 - **Store badges in the hero.** App Store + Google Play badges live directly below the phone mockup, greyed out, each with an amber "COMING SOON" ribbon overlaid at the bottom — same treatment as the Sorted app marketing site. Added `appstore-badge.svg` to assets; Google Play badge is the Wikimedia SVG.
