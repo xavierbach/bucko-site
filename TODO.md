@@ -1,9 +1,8 @@
 # Bucko Site TODO
 
 ## Next
-- [ ] Real email capture backend (current form is client-only thank-you)
 - [ ] OG social image (currently reuses app icon)
-- [ ] Replace placeholder App Store / Google Play badges in the CTA section with real download links once the apps are approved
+- [ ] Wire the greyed-out App Store + Google Play badges to real download links once approved (remove `.badge-greyed` filter + `.coming-banner` overlay)
 - [ ] Feature graphic 1024×500 PNG for Play Console store listing (`assets/feature-graphic.png`)
 - [ ] Real iPhone + Android device-frame screenshots in the hero (currently a CSS phone mock with placeholder data)
 - [ ] `sitemap.xml` and `robots.txt`
@@ -22,3 +21,7 @@
 - [x] Pricing section with Free + Bucko Pro cards (2026-04-18)
 - [x] Copy trimmed across hero, features, steps, CTA, FAQ (2026-04-18)
 - [x] Removed red half-circle minus buttons from hero phone mockup (2026-04-18)
+- [x] Removed email-waitlist CTA section (2026-04-18)
+- [x] Store badges with "COMING SOON" ribbons below hero mockup (2026-04-18)
+- [x] Pricing split into Free / Pro Monthly / Pro Annual with Most-popular + Best-value badges (2026-04-18)
+- [x] Real email capture backend — no longer needed (2026-04-18)

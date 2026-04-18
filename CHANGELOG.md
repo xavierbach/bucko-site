@@ -1,5 +1,12 @@
 # Bucko Site Changelog
 
+## [Build 5] — 2026-04-18
+- **Removed the email-waitlist CTA section entirely.** No more "coming to iPhone and Android" form — the messaging now sits with the store badges themselves.
+- **Store badges in the hero.** App Store + Google Play badges live directly below the phone mockup, greyed out, each with an amber "COMING SOON" ribbon overlaid at the bottom — same treatment as the Sorted app marketing site. Added `appstore-badge.svg` to assets; Google Play badge is the Wikimedia SVG.
+- **Pricing split into three tiers.** Bucko Pro is now two cards: **Pro Monthly** ($1.99/mo, "Most popular", green glow) and **Pro Annual** ($9.99/yr, "Best value", amber glow, "Save 58% vs monthly"). Free stays. Grid goes 3-wide on desktop, stacks on mobile.
+- Removed `.cta-and` and `.cta-*` CSS, dead after the CTA section was dropped.
+- New CSS: `.hero-badges`, `.badge-wrap`, `.badge-img`, `.coming-banner`, `.price-grid-3`, `.price-card-value`, `.price-badge-value`.
+
 ## [Build 4] — 2026-04-18
 - **New Pricing section** with two side-by-side cards (Free + Bucko Pro), between How-it-works and the CTA. Pro card gets a "Most families" badge, the subtle green glow treatment, and the $9.99/year alt price with 7-day-trial line. Added `#pricing` to the nav.
 - **Copy neatened across the board**. Hero lede, feature paragraphs, steps, CTA body, and all five FAQ answers trimmed — same message, fewer words. No content removed, just less filler.

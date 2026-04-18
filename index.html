@@ -61,7 +61,6 @@
           The weekly chore fight turns into a game they ask to play.
         </p>
         <div class="hero-actions">
-          <a href="#download" class="btn btn-primary">Get early access</a>
           <a href="#how" class="btn btn-ghost">See how it works →</a>
         </div>
         <div class="trust-row">
@@ -105,6 +104,17 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="wrap hero-badges reveal" id="download">
+      <div class="badge-wrap" aria-label="Coming soon to the App Store">
+        <img class="badge-img" src="assets/appstore-badge.svg" alt="App Store" height="56" />
+        <div class="coming-banner">COMING SOON</div>
+      </div>
+      <div class="badge-wrap" aria-label="Coming soon to Google Play">
+        <img class="badge-img" src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" height="56" />
+        <div class="coming-banner">COMING SOON</div>
       </div>
     </div>
   </section>
@@ -191,7 +201,7 @@
         <h2>Free for one kid. Pro unlocks the rest.</h2>
         <p class="lede">No ads, no trial countdown, no account. Upgrade only if you've got more than one kid.</p>
       </div>
-      <div class="price-grid">
+      <div class="price-grid price-grid-3">
         <article class="price-card reveal">
           <div class="price-card-head">
             <h3>Free</h3>
@@ -210,41 +220,42 @@
           </ul>
         </article>
         <article class="price-card price-card-featured reveal">
-          <span class="price-badge">Most families</span>
+          <span class="price-badge">Most popular</span>
           <div class="price-card-head">
-            <h3>Bucko Pro</h3>
+            <h3>Pro Monthly</h3>
             <div class="price">
               <span class="price-amount">$1.99</span>
               <span class="price-period">/ month</span>
             </div>
-            <div class="price-alt">or <strong>$9.99 / year</strong> · 7-day free trial</div>
+            <div class="price-alt">7-day free trial · cancel anytime</div>
           </div>
           <p class="price-lede">Everything in Free, plus:</p>
           <ul class="price-list">
             <li>Unlimited kids</li>
             <li>iCloud (iOS) + Google Drive (Android) sync — coming soon</li>
             <li>Priority support</li>
-            <li>Cancel anytime in your App Store or Google Play account</li>
+            <li>Month-to-month, cancel in the App Store or Google Play</li>
+          </ul>
+        </article>
+        <article class="price-card price-card-value reveal">
+          <span class="price-badge price-badge-value">Best value</span>
+          <div class="price-card-head">
+            <h3>Pro Annual</h3>
+            <div class="price">
+              <span class="price-amount">$9.99</span>
+              <span class="price-period">/ year</span>
+            </div>
+            <div class="price-alt"><strong>Save 58%</strong> vs monthly · 7-day free trial</div>
+          </div>
+          <p class="price-lede">Everything in Monthly, plus:</p>
+          <ul class="price-list">
+            <li>Unlimited kids</li>
+            <li>Under $0.84/month, billed yearly</li>
+            <li>iCloud + Google Drive sync — coming soon</li>
+            <li>Priority support</li>
           </ul>
         </article>
       </div>
-    </div>
-  </section>
-
-  <!-- Download / CTA -->
-  <section id="download" class="section cta">
-    <div class="wrap cta-inner reveal">
-      <img src="assets/icon.png" alt="" width="96" height="96" class="cta-icon" />
-      <h2>Bucko is coming to iPhone <em class="cta-and">and</em> Android.</h2>
-      <p class="lede">
-        In testing now — TestFlight on iOS, internal track on Google Play.
-        Drop your email and we'll tell you the minute it lands.
-      </p>
-      <form class="cta-form" onsubmit="event.preventDefault(); this.querySelector('.cta-form-status').textContent = 'Thanks — you\'re on the list.'; this.querySelector('input').disabled = true;">
-        <input type="email" required placeholder="you@family.com" aria-label="Email address" />
-        <button type="submit" class="btn btn-primary">Notify me</button>
-        <span class="cta-form-status" role="status"></span>
-      </form>
     </div>
   </section>
 
