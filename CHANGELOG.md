@@ -1,5 +1,8 @@
 # Bucko Site Changelog
 
+## [Build 10] — 2026-04-20
+- **Free tier chore limit** — pricing cards updated: Free tier "One kid, unlimited chores" → "up to 6 chores"; Pro Monthly and Pro Annual cards gain "Unlimited chores per child"; FAQ subscription answer updated to mention the 6-chore limit (`index.html`)
+
 ## [Build 9] — 2026-04-20
 - **Features section overhaul** — replaced "Pocket money that works" + "Nothing to sign up for" with "Streak chores for real habits" (new mechanic) and "Both parents, one app" (Family Sharing, Pro); updated Kids View card to mention Face ID/PIN lock; updated icons card to call out 50+ icons.
 - **Pricing cards updated** — Free tier now accurately lists streak chores, Kids View with Face ID/PIN, and 50+ icons; Pro tiers replace "coming soon" sync and generic icons with specific features: Unlimited kids, 40+ extra animal avatars, Family Sharing, iCloud Backup.
