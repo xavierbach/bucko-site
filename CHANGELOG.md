@@ -1,5 +1,14 @@
 # Bucko Site Changelog
 
+## [Build 9] — 2026-04-20
+- **Features section overhaul** — replaced "Pocket money that works" + "Nothing to sign up for" with "Streak chores for real habits" (new mechanic) and "Both parents, one app" (Family Sharing, Pro); updated Kids View card to mention Face ID/PIN lock; updated icons card to call out 50+ icons.
+- **Pricing cards updated** — Free tier now accurately lists streak chores, Kids View with Face ID/PIN, and 50+ icons; Pro tiers replace "coming soon" sync and generic icons with specific features: Unlimited kids, 40+ extra animal avatars, Family Sharing, iCloud Backup.
+- **New FAQ: "Can both parents use the app?"** — explains Family Sharing with the 6-character code flow; inserted between lost-phone and kids-use FAQs.
+- **Lost-phone FAQ updated** — iCloud Backup now live for Pro iOS users; updated answer accordingly.
+- **Privacy Policy updated** (20 Apr 2026) — added Family Sharing section covering Supabase as data processor, what data is stored, access control via family code, data retention/deletion, and cross-border transfer disclosure; updated "how data leaves device" list to include Family Sharing as item 4; updated permissions section (push notifications now active); updated GDPR and Australian Privacy Act notes to reference Supabase; updated callout and intro to reflect two narrow exceptions.
+- **Terms of Use updated** (20 Apr 2026) — Section 3 updated to acknowledge Supabase backend for Family Sharing; Pro features list updated to include Family Sharing and iCloud Backup (removing "future version" language); new Section 3b covering Family Sharing terms (shared access, code security, data on Supabase, leaving/deletion); cancellation clause updated to list all gated Pro features.
+- **Support page updated** (20 Apr 2026) — "Does Bucko sync?" answer updated to "Yes" with both iCloud Backup and Family Sharing explained; new "How do I set up Family Sharing?" step-by-step FAQ added; data deletion answer updated to mention Supabase row and deletion request process.
+
 ## [Build 8] — 2026-04-19
 - **Copy overhaul** across hero, features, steps, pricing intro, and pricing cards. Shorter, punchier, more parent-voice. Removed "Priority support" from Pro tiers; replaced with "Unlock more icons and themes" + "Backup and sync (coming soon)" / "Best value for families".
 - **Two new FAQs**: "What age is this for?" (4–10) and "Do rewards have to be money?" (no — points can be screen time, treats, etc.).

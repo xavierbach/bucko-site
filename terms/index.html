@@ -41,7 +41,7 @@
       <header class="doc-head">
         <span class="eyebrow">Legal</span>
         <h1>Terms of Use</h1>
-        <p class="doc-meta">Effective 18 April 2026 · Last updated 18 April 2026</p>
+        <p class="doc-meta">Effective 18 April 2026 · Last updated 20 April 2026</p>
       </header>
 
       <div class="doc-body">
@@ -62,11 +62,11 @@
         <p>Bucko is a household chore-tracker and reward-counter for parents and guardians. It is intended to be set up and operated by an adult. Children may participate alongside an adult — for example, watching the parent tap a reward button — but the app is not designed for unsupervised use by children.</p>
         <p>Bucko is not a financial product. The "dollar" amounts you assign to chores and the totals the app shows are local labels for your own household accounting. The app does not move money, hold funds, process payments, or issue any financial instrument. Any actual payment between you and your child happens entirely outside the app.</p>
 
-        <h2>3. No accounts, no service obligation</h2>
-        <p>Bucko does not require an account and does not include a server-side service component for your chore data. We do not promise uptime, support hours, or feature availability. Updates to the app are delivered through the Apple App Store and Google Play at our discretion.</p>
+        <h2>3. No accounts; limited server use</h2>
+        <p>Bucko does not require an account. For standard use, there is no server-side component for your chore data — everything stays on your device. The exception is the optional <strong>Family Sharing</strong> feature (Bucko Pro): when you create or join a family, your app data syncs via a third-party database service (Supabase). For that feature, we do not promise uptime or availability of the sync component, and sync may be unavailable during outages beyond our control. We do not promise support hours or feature availability for any part of the app. Updates are delivered through the Apple App Store and Google Play at our discretion.</p>
 
         <h2>3a. Bucko Pro subscriptions (auto-renewing)</h2>
-        <p>Bucko offers an optional <strong>Bucko Pro</strong> auto-renewing subscription that unlocks unlimited child profiles (and, in a future version, iCloud / Google Drive sync). The free tier of Bucko works without a subscription.</p>
+        <p>Bucko offers an optional <strong>Bucko Pro</strong> auto-renewing subscription that unlocks: (a) unlimited child profiles, (b) 40+ additional avatar icons, (c) Family Sharing — real-time sync between two parents' devices via a shared 6-character code, and (d) iCloud Backup (iOS). The free tier of Bucko works without a subscription.</p>
         <p>By starting a Bucko Pro subscription, you agree to the following:</p>
         <ul>
           <li><strong>Plans and pricing.</strong> Bucko Pro is offered in two plans: <strong>Bucko Pro Monthly</strong> at <strong>US$1.99 per month</strong> and <strong>Bucko Pro Yearly</strong> at <strong>US$17.99 per year</strong>. Both plans begin with a <strong>7-day free trial</strong> for first-time subscribers. Local-currency equivalents are shown in the App Store / Play Store at the time of purchase.</li>
@@ -76,12 +76,23 @@
           <li><strong>Cancelling during free trial.</strong> If you cancel at least 24 hours before the trial ends, you are not charged. Otherwise the first paid period begins automatically.</li>
           <li><strong>Refunds.</strong> Refunds are handled by Apple (App Store → Purchase History → Report a Problem) or Google (Play Store → Order History → Refund), per their refund policies. We do not process refunds directly.</li>
           <li><strong>Price changes.</strong> If we change the price of a plan, the new price applies only to renewals <strong>after</strong> you have been notified through the store, and only to the extent permitted by Apple's and Google's rules — which require explicit consent for material price increases.</li>
-          <li><strong>Loss of features after cancellation.</strong> When your subscription expires, all the kids and chore data already in the app remain present and fully editable; the only Pro feature gated off is <strong>adding a new child</strong> beyond the free-tier limit of one. You can re-subscribe at any time to add more.</li>
+          <li><strong>Loss of features after cancellation.</strong> When your subscription expires, all kids and chore data already in the app remain present and fully editable. The Pro features that gate off are: adding a new child beyond the free-tier limit of one, creating or joining a Family Sharing link, and iCloud Backup. Existing kids and their history are unaffected. You can re-subscribe at any time to regain Pro features.</li>
         </ul>
         <p>For a detailed description of how the subscription transaction is processed (including our use of RevenueCat as a subscription-management provider), see the "Bucko Pro subscriptions" section of the <a href="/privacy/">Privacy Policy</a>.</p>
 
+        <h2>3b. Family Sharing terms</h2>
+        <p>If you use the Family Sharing feature, the following additional terms apply:</p>
+        <ul>
+          <li><strong>Pro required.</strong> Both participants should have an active Bucko Pro subscription to create or join a family.</li>
+          <li><strong>Shared access.</strong> Both devices that join a family have equal read and write access to the shared app data. Changes made on either device overwrite the shared state. You are responsible for ensuring only trusted people know the family code.</li>
+          <li><strong>Code security.</strong> The 6-character family code is the sole access credential for your family's data on our servers. Keep it private. We cannot recover data accessed by an unauthorised party who obtained your code.</li>
+          <li><strong>Data on Supabase servers.</strong> By using Family Sharing you acknowledge that your app data (child profile nicknames, chore configurations, tap history) will be stored on servers operated by Supabase, Inc. See the <a href="/privacy/">Privacy Policy</a> for details.</li>
+          <li><strong>Leaving a family.</strong> Tapping "Leave Family" removes the code from your device and stops sync. The shared data row may remain on Supabase's servers. To request deletion, email <a href="mailto:hello@getbucko.com">hello@getbucko.com</a>.</li>
+          <li><strong>No guarantee of sync availability.</strong> Family Sharing relies on a third-party service (Supabase). We are not liable for data loss or sync failures caused by outages or errors in that service.</li>
+        </ul>
+
         <h2>4. Your data</h2>
-        <p>Your use of the app is also governed by our <a href="/privacy/">Privacy Policy</a>, which describes how the app handles information. In summary: everything you enter stays on your device. You are responsible for backing up your data using the export feature in the Settings screen and/or your device's standard backup mechanism.</p>
+        <p>Your use of the app is also governed by our <a href="/privacy/">Privacy Policy</a>, which describes how the app handles information. In summary: by default, everything you enter stays on your device. If you use Family Sharing (Pro), app data is also stored on Supabase-hosted servers as described in the Privacy Policy. You are responsible for backing up your data using the export feature in Settings and/or your device's standard backup mechanism.</p>
 
         <h2>5. Disclaimers</h2>
         <p>The app is provided <strong>"as is" and "as available"</strong>, without warranties of any kind, whether express, implied, statutory, or otherwise. To the maximum extent permitted by law, we disclaim all warranties, including warranties of merchantability, fitness for a particular purpose, non-infringement, accuracy, and uninterrupted or error-free operation.</p>

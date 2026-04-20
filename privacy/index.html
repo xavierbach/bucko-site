@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#0F172A" />
   <title>Bucko — Privacy Policy</title>
-  <meta name="description" content="How the Bucko app handles your information. Short answer: it doesn't leave your device." />
+  <meta name="description" content="How the Bucko app handles your information. Local-first by design — and what changes when you use Family Sharing." />
 
   <meta property="og:title" content="Bucko — Privacy Policy" />
-  <meta property="og:description" content="No accounts. No servers. No analytics. Everything you enter stays on your device." />
+  <meta property="og:description" content="No accounts. No tracking. Local-first storage with optional Family Sharing cloud sync for Pro users." />
   <meta property="og:image" content="https://getbucko.com/assets/icon.png" />
   <meta property="og:url" content="https://getbucko.com/privacy/" />
   <meta property="og:type" content="article" />
@@ -41,16 +41,16 @@
       <header class="doc-head">
         <span class="eyebrow">Legal</span>
         <h1>Privacy Policy</h1>
-        <p class="doc-meta">Effective 18 April 2026 · Last updated 18 April 2026</p>
+        <p class="doc-meta">Effective 18 April 2026 · Last updated 20 April 2026</p>
       </header>
 
       <div class="doc-body">
         <p>This privacy policy describes how the Bucko mobile application ("Bucko", "the app", "we", "our") handles information. Bucko is published by Thorley Park. It is available on Apple iOS and Google Android.</p>
-        <p>We designed Bucko to be <strong>local-first</strong>: the app does not have a user account system, does not transmit your chore data to our servers, and does not include any third-party analytics, advertising, or tracking SDKs.</p>
-        <p>The single, narrow exception is the optional <strong>Bucko Pro</strong> subscription. If — and only if — you choose to subscribe, the in-app purchase is handled by Apple or Google and routed through our subscription infrastructure provider (RevenueCat). That flow is described in <a href="#bucko-pro">Bucko Pro subscriptions</a> below.</p>
+        <p>We designed Bucko to be <strong>local-first</strong>: the app does not have a user account system and does not include any third-party analytics, advertising, or tracking SDKs.</p>
+        <p>There are two narrow exceptions. First, the optional <strong>Bucko Pro subscription</strong>: if you subscribe, the in-app purchase is handled by Apple or Google and routed through RevenueCat (described in <a href="#bucko-pro">Bucko Pro subscriptions</a> below). Second, the optional <strong>Family Sharing</strong> feature for Pro subscribers: if you create or join a family, your app data syncs via a Supabase-hosted database so both parents stay in sync (described in <a href="#family-sharing">Family Sharing sync</a> below).</p>
 
         <div class="doc-callout">
-          <p><strong>The short version:</strong> No accounts. No servers for chore data. No analytics. No tracking. Everything you enter stays on your device. We do not see it. If you subscribe, Apple/Google + RevenueCat process the transaction — they do not see your chore data.</p>
+          <p><strong>The short version:</strong> No accounts. No analytics. No tracking. By default, everything you enter stays on your device and we never see it. Two optional exceptions: (1) Bucko Pro subscription — Apple/Google + RevenueCat process the transaction, they never see your chore data. (2) Family Sharing (Pro only) — your app data syncs to Supabase-hosted servers so both parents stay in sync.</p>
         </div>
 
         <nav class="doc-toc" aria-label="On this page">
@@ -59,6 +59,7 @@
             <li><a href="#stored">Stored on your device</a></li>
             <li><a href="#not-collected">What we do not collect</a></li>
             <li><a href="#bucko-pro">Bucko Pro subscriptions</a></li>
+            <li><a href="#family-sharing">Family Sharing sync</a></li>
             <li><a href="#permissions">Permissions</a></li>
             <li><a href="#leaves">How data leaves your device</a></li>
             <li><a href="#controls">Your controls</a></li>
@@ -107,29 +108,50 @@
         <p>If you never subscribe, none of the above data flows happen.</p>
 
         <h2 id="permissions">Permissions Bucko requests</h2>
-        <p>Bucko requests <strong>no runtime permissions</strong> at the time of this writing. The app does not access your microphone, camera, location, contacts, calendar, photos, motion sensors, or notifications.</p>
-        <p>If a future version of Bucko adds a feature that requires a permission (for example, optional iCloud or Google Drive sync, or local notifications for chore reminders), we will update this policy and the app will request that permission from you at the moment it is needed.</p>
+        <p>Bucko requests the following runtime permissions:</p>
+        <ul>
+          <li><strong>Local notifications</strong> (optional): used for the weekly pay-day reminder. The app requests this permission only when you enable the reminder in Settings. You can decline or revoke it at any time in your device's notification settings without affecting any other feature.</li>
+        </ul>
+        <p>Bucko does <strong>not</strong> access your microphone, camera, location, contacts, calendar, photos, or any other sensor. If a future version adds a feature requiring additional permissions, we will update this policy and the app will request your permission at the moment it is needed.</p>
 
         <h2 id="leaves">How your data leaves your device</h2>
-        <p>Your data only leaves your device in three scenarios, all of which are under your control:</p>
+        <p>Your data only leaves your device in the following scenarios, all of which are under your control:</p>
         <ol>
           <li><strong>You export it.</strong> The Settings screen includes an export action that produces a JSON file containing your app data. You decide where that file goes (Files app, AirDrop, email, Google Drive, etc.). We do not see it.</li>
           <li><strong>You import it on another device.</strong> If you transfer that JSON file to another device and import it, your data lives on that device too.</li>
           <li><strong>Your operating system backs it up.</strong> If you have iCloud Backup (iOS) or Google Auto Backup (Android) enabled, your app data is included in those backups according to Apple's and Google's policies. Those backups go to <strong>your</strong> Apple or Google account, not to us.</li>
+          <li><strong>You enable Family Sharing (Bucko Pro).</strong> If you create or join a family via Settings → Family Sharing, your app data is uploaded to and stored on servers operated by Supabase, Inc. (see <a href="#family-sharing">Family Sharing sync</a> below). This only happens when you actively opt in to this feature.</li>
         </ol>
+
+        <h2 id="family-sharing">Family Sharing sync (Bucko Pro)</h2>
+        <p>Family Sharing is an optional Bucko Pro feature that lets two parents (or carers) keep their app data in sync across separate devices — including separate Apple IDs and across iOS and Android.</p>
+        <p><strong>How it works:</strong> one parent creates a family link and receives a 6-character code (e.g. <code>KOALA7</code>). They share that code with the other parent, who enters it in the app. From that point, every time either parent saves data (tapping a reward, editing a chore, etc.), the full app dataset is written to a shared row in a database hosted by <strong>Supabase, Inc.</strong> and delivered to the other parent's device in real time.</p>
+        <p><strong>What is stored on Supabase servers:</strong></p>
+        <ul>
+          <li>Child profile data: first name or nickname, chosen icon and colour, points-currency name and icon.</li>
+          <li>Chore configuration: chore names, icons, payout amounts, streak thresholds.</li>
+          <li>Weekly tap history: which chores have been completed, how many points awarded, whether the week has been paid out.</li>
+          <li>The 6-character family code (used as the row identifier and shared access key).</li>
+        </ul>
+        <p><strong>What is NOT stored on Supabase servers:</strong> payment information, IP addresses, device identifiers, your name or email, children's last names, dates of birth, location data, photos, or any data other than the app state listed above.</p>
+        <p><strong>Access control:</strong> the 6-character code is the only credential protecting this data. Any device that knows the code can read and write the family's data. Treat it like a shared password and only share it with people you trust.</p>
+        <p><strong>Data retention:</strong> the family data row persists on Supabase's servers after you tap "Leave Family". The row becomes inaccessible to all devices once no device holds the code, but it is not automatically deleted. To request deletion of your family's data from Supabase, email <a href="mailto:hello@getbucko.com">hello@getbucko.com</a> with your family code.</p>
+        <p><strong>Supabase as a data processor:</strong> Supabase, Inc. acts as a data processor on our behalf. Supabase stores data in data centres that may be located in the United States or other regions. See <a href="https://supabase.com/privacy">supabase.com/privacy</a> for Supabase's privacy practices.</p>
+        <p>If you never use Family Sharing, none of the above applies and no chore data is sent to any server.</p>
 
         <h2 id="controls">Your controls</h2>
         <ul>
           <li><strong>View your data.</strong> Everything is visible inside the app.</li>
           <li><strong>Export your data.</strong> Settings → Export Data produces a JSON file.</li>
-          <li><strong>Delete your data.</strong> Settings → Reset Data wipes everything stored by the app on the device. Uninstalling Bucko also removes all its data.</li>
+          <li><strong>Delete your local data.</strong> Settings → Reset Data wipes everything stored by the app on the device. Uninstalling Bucko also removes all its local data.</li>
+          <li><strong>Leave Family Sharing.</strong> Settings → Family Sharing → Leave Family stops sync immediately and removes the code from your device. To request deletion of the shared data row from Supabase's servers, email <a href="mailto:hello@getbucko.com">hello@getbucko.com</a>.</li>
           <li><strong>Cancel a subscription.</strong> iOS Settings → [your name] → Subscriptions, or Google Play → Subscriptions.</li>
-          <li><strong>Opt out of backup.</strong> You can exclude Bucko from iCloud Backup or Google Auto Backup in your device's system settings.</li>
+          <li><strong>Opt out of OS backup.</strong> You can exclude Bucko from iCloud Backup or Google Auto Backup in your device's system settings.</li>
         </ul>
 
         <h2 id="kids">Children's privacy</h2>
         <p>Bucko is designed for parents and guardians to manage household chores. It is not directed to children under 13 (or under 16 in jurisdictions where that is the relevant age). We do not knowingly collect any personal information from children, because <strong>we do not collect any personal information from anyone</strong>.</p>
-        <p>A parent using the app may type in a child's first name or nickname as a profile label. That text stays on the parent's device. We never see it.</p>
+        <p>A parent using the app may type in a child's first name or nickname as a profile label. By default, that text stays on the parent's device and we never see it. If Family Sharing is enabled, child profile data (first name or nickname, icon, chore configuration) is included in the app state synced to Supabase-hosted servers and is readable by any device that has joined the same family.</p>
 
         <h2 id="security">Security</h2>
         <p>Because Bucko stores chore data only on your device using standard operating system storage, the security of that data depends on the security of your device (passcode, biometric lock, OS-level encryption). We recommend keeping your device's operating system up to date and using a passcode. Subscription transactions are protected by Apple's and Google's billing infrastructure.</p>
@@ -144,9 +166,9 @@
         <h3>California residents (CCPA/CPRA)</h3>
         <p>We do not "sell" or "share" personal information as those terms are defined under California law. Because we do not collect personal information about app usage, the rights to access, delete, correct, or opt out of sale do not have any data to act upon — but if you believe we hold information about you, you may contact us at the address above.</p>
         <h3>EU/UK residents (GDPR/UK GDPR)</h3>
-        <p>Bucko does not process your chore data on our infrastructure. The data you enter is stored on your own device and we are not the data controller for that on-device storage. For Bucko Pro subscriptions, RevenueCat acts as a data processor under our instructions; see RevenueCat's GDPR materials at <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>.</p>
+        <p>By default, Bucko does not process your chore data on our infrastructure and we are not the data controller for on-device storage. Two exceptions apply when you use optional Pro features: (1) <strong>Bucko Pro subscriptions</strong> — RevenueCat acts as a data processor under our instructions; see <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>. (2) <strong>Family Sharing</strong> — Supabase, Inc. acts as a data processor under our instructions, storing your app data in data centres that may be located outside the EU/EEA; see <a href="https://supabase.com/privacy">supabase.com/privacy</a>. For GDPR data subject requests (access, erasure, portability), email <a href="mailto:hello@getbucko.com">hello@getbucko.com</a>.</p>
         <h3>Australian residents (Privacy Act 1988)</h3>
-        <p>This policy is intended to comply with the Australian Privacy Principles. Because we do not collect personal information about app usage, APP 1–13 obligations regarding collection, use, disclosure, and access are met by the absence of collection.</p>
+        <p>This policy is intended to comply with the Australian Privacy Principles. For users who do not use Family Sharing, we do not collect personal information about app usage and APP 1–13 obligations are met by the absence of collection. For users who enable Family Sharing, child profile nicknames and chore data are transmitted to Supabase-hosted servers; we handle this data in accordance with APP 8 (cross-border disclosure) and will respond to access and correction requests at <a href="mailto:hello@getbucko.com">hello@getbucko.com</a>.</p>
       </div>
     </div>
   </main>
