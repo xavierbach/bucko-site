@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["5W4VXC6XPN.com.thorleypark.bucko"],
+        "components": [
+          {
+            "/": "/join/",
+            "comment": "Family sharing join links — https://getbucko.com/join/?code=XXXXXX"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,5 +1,10 @@
 # Bucko Site Changelog
 
+## [Build 11] — 2026-04-20
+- **Family join page** — new `/join/` page extracts the family code from `?code=` query param, displays it prominently, attempts to open `bucko://join/CODE` automatically, and falls back to App Store + Play Store download links after 1.8 s (`join/index.html`)
+- **Apple Universal Links** — `/.well-known/apple-app-site-association` declares that `/join/` paths are handled by `5W4VXC6XPN.com.thorleypark.bucko`, so iOS routes `https://getbucko.com/join/?code=CODE` straight into the app when it's installed
+- **Android App Links** — `/.well-known/assetlinks.json` scaffolded; SHA-256 fingerprint placeholder must be replaced with the EAS Build signing cert value before Android verified App Links work
+
 ## [Build 10] — 2026-04-20
 - **Free tier chore limit** — pricing cards updated: Free tier "One kid, unlimited chores" → "up to 6 chores"; Pro Monthly and Pro Annual cards gain "Unlimited chores per child"; FAQ subscription answer updated to mention the 6-chore limit (`index.html`)
 
