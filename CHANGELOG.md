@@ -1,5 +1,9 @@
 # Bucko Site Changelog
 
+## [Build 15] — 2026-04-23
+- **Pricing card copy updated** — Pro Monthly and Pro Annual now show the full feature list: Unlimited kids, Unlimited chores per child, 40+ extra animal & character avatars, Family Sharing, iCloud Backup (iOS). Removed "Backup and sync (coming soon)" and "Unlock more icons and themes" placeholders (`index.html`)
+- **Pricing section header** — h2 updated to "Free for one kid, 6 chores. Pro unlocks the rest."; lede updated to mention chores as an upgrade reason alongside kids (`index.html`)
+
 ## [Build 11] — 2026-04-20
 - **Family join page** — new `/join/` page extracts the family code from `?code=` query param, displays it prominently, attempts to open `bucko://join/CODE` automatically, and falls back to App Store + Play Store download links after 1.8 s (`join/index.html`)
 - **Apple Universal Links** — `/.well-known/apple-app-site-association` declares that `/join/` paths are handled by `5W4VXC6XPN.com.thorleypark.bucko`, so iOS routes `https://getbucko.com/join/?code=CODE` straight into the app when it's installed
