@@ -18,6 +18,7 @@
 - [x] iOS + Android positioning across nav, CTA, FAQ (2026-04-18)
 - [x] Bucko Pro subscription pricing reflected in FAQ + legal pages (2026-04-18)
 - [x] Footer Privacy / Terms / Support links (2026-04-18)
+- [x] Instagram link in footer (2026-04-23)
 - [x] Pricing section with Free + Bucko Pro cards (2026-04-18)
 - [x] Copy trimmed across hero, features, steps, CTA, FAQ (2026-04-18)
 - [x] Removed red half-circle minus buttons from hero phone mockup (2026-04-18)
