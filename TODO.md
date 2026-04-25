@@ -2,12 +2,12 @@
 
 ## Next
 - [ ] OG social image (currently reuses app icon)
-- [ ] Wire the greyed-out App Store + Google Play badges to real download links once approved (remove `.badge-greyed` filter + `.coming-banner` overlay)
 - [ ] Feature graphic 1024×500 PNG for Play Console store listing (`assets/feature-graphic.png`)
 - [ ] Real iPhone + Android device-frame screenshots in the hero (currently a CSS phone mock with placeholder data)
 - [ ] `sitemap.xml` and `robots.txt`
 
 ## Done
+- [x] App Store live link + remove COMING SOON overlay (2026-04-25)
 - [x] Initial site deployed to GitHub Pages at getbucko.com
 - [x] Apex + www DNS on GoDaddy pointing to GitHub Pages
 - [x] HTTPS enforced, cert issued

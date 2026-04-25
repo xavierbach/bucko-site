@@ -1,5 +1,8 @@
 # Bucko Site Changelog
 
+## [Build 17] — 2026-04-25
+- **App Store launch** — App Store badge on hero is now a live link (`https://bit.ly/4es2STp`); removed COMING SOON overlay and grayscale filter. Google Play badge retains COMING SOON. All App Store links in `/join/` updated to the same bit.ly URL (`index.html`, `join/index.html`, `styles.css`)
+
 ## [Build 16] — 2026-04-23
 - **Instagram link** — added @bucko.app Instagram link to footer nav (`index.html`)
 
