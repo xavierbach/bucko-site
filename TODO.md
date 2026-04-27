@@ -7,6 +7,8 @@
 - [ ] `sitemap.xml` and `robots.txt`
 
 ## Done
+- [x] Privacy policy: remove stale Export Data bullet (2026-04-27)
+- [x] Features section: Smart Streaks card as hero feature (2026-04-27)
 - [x] App Store live link + remove COMING SOON overlay (2026-04-25)
 - [x] Initial site deployed to GitHub Pages at getbucko.com
 - [x] Apex + www DNS on GoDaddy pointing to GitHub Pages

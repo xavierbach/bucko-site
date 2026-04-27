@@ -1,5 +1,9 @@
 # Bucko Site Changelog
 
+## [Build 18] — 2026-04-27
+- **Privacy policy** — removed stale "Export your data / Settings → Export Data" bullet since that feature no longer exists (`privacy/index.html`)
+- **Features section** — replaced "Pocket money that actually works" card with "Streaks kids actually chase" — highlights the smart streaks feature with a "No AI, just a number" angle (`index.html`)
+
 ## [Build 17] — 2026-04-25
 - **App Store launch** — App Store badge on hero is now a live link (`https://bit.ly/4es2STp`); removed COMING SOON overlay and grayscale filter. Google Play badge retains COMING SOON. All App Store links in `/join/` updated to the same bit.ly URL (`index.html`, `join/index.html`, `styles.css`)
 
