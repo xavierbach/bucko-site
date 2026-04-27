@@ -1,5 +1,8 @@
 # Bucko Site Changelog
 
+## [Build 19] — 2026-04-27
+- **Streaks card copy** — removed hard `<br />` and tightened sentence so text wraps cleanly at any screen size (`index.html`)
+
 ## [Build 18] — 2026-04-27
 - **Privacy policy** — removed stale "Export your data / Settings → Export Data" bullet since that feature no longer exists (`privacy/index.html`)
 - **Features section** — replaced "Pocket money that actually works" card with "Streaks kids actually chase" — highlights the smart streaks feature with a "No AI, just a number" angle (`index.html`)
