@@ -1,5 +1,8 @@
 # Bucko Site Changelog
 
+## [Build 20] — 2026-04-30
+- **Get-the-app anchor** — added `scroll-margin-top: 96px` to `.hero-badges` so clicking "Get the app" no longer scrolls past the badges (sticky nav was overlapping them) (`styles.css`)
+
 ## [Build 19] — 2026-04-27
 - **Streaks card copy** — removed hard `<br />` and tightened sentence so text wraps cleanly at any screen size (`index.html`)
 

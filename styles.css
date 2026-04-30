@@ -563,6 +563,7 @@ p  { margin: 0; text-wrap: pretty; }
   align-items: center;
   gap: 24px;
   flex-wrap: wrap;
+  scroll-margin-top: 96px;
 }
 .badge-wrap {
   position: relative;
