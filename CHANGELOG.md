@@ -1,5 +1,8 @@
 # Bucko Site Changelog
 
+## [Build 21] — 2026-05-27
+- **Google Play launch** — Google Play badge on hero is now a live link (`https://bit.ly/buckoandroid` → `play.google.com/store/apps/details?id=com.thorleypark.bucko`); replaced the `<div class="badge-wrap coming">` wrapper with `<a class="badge-wrap">`, dropped the `.coming` modifier so the badge auto-loses its grayscale/opacity treatment, and removed the COMING SOON overlay. Mirrors the Build 17 App Store launch. v1.4.0 / versionCode 6 is live in 177 countries.
+
 ## [Build 20] — 2026-04-30
 - **Get-the-app anchor** — added `scroll-margin-top: 96px` to `.hero-badges` so clicking "Get the app" no longer scrolls past the badges (sticky nav was overlapping them) (`styles.css`)
 

@@ -7,6 +7,7 @@
 - [ ] `sitemap.xml` and `robots.txt`
 
 ## Done
+- [x] **Google Play live link + remove COMING SOON overlay** — `https://bit.ly/buckoandroid` wired to hero badge (Build 21, 2026-05-27)
 - [x] Get-the-app anchor: scroll-margin-top so badges aren't hidden under sticky nav (2026-04-30)
 - [x] Privacy policy: remove stale Export Data bullet (2026-04-27)
 - [x] Features section: Smart Streaks card as hero feature (2026-04-27)
