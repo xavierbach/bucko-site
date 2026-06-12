@@ -1,5 +1,8 @@
 # Bucko Site Changelog
 
+## [Build 23] — 2026-06-12
+- **Google Play badge self-hosted** — the badge was hotlinked from `upload.wikimedia.org` and failing to load; now served as `assets/playstore-badge.svg` (official artwork, 4 KB), matching the already-local App Store badge. Replaced in the hero and in both `/join/` download rows (`index.html`, `join/index.html`)
+
 ## [Build 22] — 2026-06-12
 - **Full visual redesign** — replaced the dark navy "SaaS template" look with a warm, hand-made design language that matches the app's chunky cartoon icon set (`styles.css` rewritten):
   - Warm paper background (`#FBF3E4`) with a subtle dot grid; ink (`#23283B`) 2px borders and hard offset "sticker" shadows on cards, buttons, and badges everywhere
