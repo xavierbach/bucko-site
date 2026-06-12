@@ -3,16 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#0F172A" />
+  <meta name="theme-color" content="#FBF3E4" />
   <title>Bucko — Join Family</title>
   <meta name="description" content="You've been invited to join a Bucko family. Open the app to sync chores and rewards in real time." />
   <meta name="robots" content="noindex" />
 
   <link rel="icon" type="image/png" href="/assets/favicon.png" />
   <link rel="apple-touch-icon" href="/assets/icon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css" />
   <style>
     .join-wrap {
@@ -23,54 +20,55 @@
       justify-content: center;
       padding: 40px 24px;
       text-align: center;
-      background: var(--navy, #0F172A);
+      background: var(--paper, #FBF3E4);
     }
     .join-icon {
       width: 80px;
       height: 80px;
       border-radius: 20px;
+      border: 2px solid #23283B;
       margin-bottom: 24px;
     }
     .join-heading {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: 'Fredoka', sans-serif;
       font-size: clamp(1.6rem, 5vw, 2.2rem);
       font-weight: 700;
-      color: #fff;
+      color: #23283B;
       margin: 0 0 12px;
     }
     .join-sub {
       font-size: 1rem;
-      color: #94A3B8;
+      color: #6E6452;
       margin: 0 auto 36px;
       max-width: 340px;
       line-height: 1.6;
     }
     .join-code-card {
-      background: #1E293B;
-      border: 1px solid rgba(34,197,94,0.3);
+      background: #FFFDF8;
+      border: 2px solid #23283B;
       border-radius: 20px;
       padding: 28px 40px;
       margin-bottom: 36px;
-      box-shadow: 0 4px 24px rgba(34,197,94,0.12);
+      box-shadow: 5px 5px 0 #23283B;
     }
     .join-code-label {
       font-size: 0.75rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      color: #22C55E;
+      color: #2E7D43;
       margin-bottom: 10px;
     }
     .join-code-value {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: 'Fredoka', sans-serif;
       font-size: clamp(2.4rem, 10vw, 3.6rem);
-      font-weight: 700;
-      color: #fff;
+      font-weight: 600;
+      color: #23283B;
       letter-spacing: 0.12em;
     }
     .join-code-hint {
       font-size: 0.8rem;
-      color: #64748B;
+      color: #93886F;
       margin-top: 10px;
     }
     .join-copy-btn {
@@ -78,9 +76,10 @@
       align-items: center;
       gap: 7px;
       margin-top: 16px;
-      background: rgba(34,197,94,0.1);
-      border: 1px solid rgba(34,197,94,0.3);
-      color: #4ADE80;
+      background: #FFC857;
+      border: 2px solid #23283B;
+      color: #23283B;
+      box-shadow: 0 3px 0 #23283B;
       font-family: inherit;
       font-size: 13px;
       font-weight: 700;
@@ -90,15 +89,15 @@
       cursor: pointer;
       transition: background 140ms ease, border-color 140ms ease;
     }
-    .join-copy-btn:hover { background: rgba(34,197,94,0.18); border-color: rgba(34,197,94,0.5); }
-    .join-copy-btn.copied { color: #22C55E; border-color: #22C55E; }
+    .join-copy-btn:hover { background: #FFD06E; }
+    .join-copy-btn.copied { background: #D2EBD3; }
     .join-status {
       font-size: 0.95rem;
-      color: #94A3B8;
+      color: #6E6452;
       margin-bottom: 32px;
       min-height: 24px;
     }
-    .join-status.opening { color: #22C55E; }
+    .join-status.opening { color: #2E7D43; }
     .join-downloads {
       display: flex;
       flex-direction: column;
@@ -110,7 +109,7 @@
     .join-downloads.visible { opacity: 1; }
     .join-downloads-label {
       font-size: 0.85rem;
-      color: #64748B;
+      color: #6E6452;
       margin-bottom: 4px;
     }
     .join-badge-row {
@@ -126,7 +125,7 @@
     .join-manual {
       margin-top: 28px;
       font-size: 0.82rem;
-      color: #475569;
+      color: #93886F;
       line-height: 1.5;
     }
     .join-no-code {
@@ -135,7 +134,7 @@
     .join-no-code .join-heading { margin-bottom: 16px; }
   </style>
 </head>
-<body style="background:#0F172A;margin:0;">
+<body style="background:#FBF3E4;margin:0;">
 
   <div class="join-wrap">
     <img class="join-icon" src="/assets/icon.png" alt="Bucko" />
@@ -172,7 +171,7 @@
         </div>
       </div>
 
-      <p class="join-manual">Already have Bucko? Open it and go to<br><strong style="color:#94A3B8;">Settings → Family Sharing → Join a Family</strong><br>and enter the code above.</p>
+      <p class="join-manual">Already have Bucko? Open it and go to<br><strong style="color:#23283B;">Settings → Family Sharing → Join a Family</strong><br>and enter the code above.</p>
     </div>
 
     <!-- No code / invalid code -->

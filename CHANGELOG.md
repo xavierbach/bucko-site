@@ -1,5 +1,21 @@
 # Bucko Site Changelog
 
+## [Build 22] — 2026-06-12
+- **Full visual redesign** — replaced the dark navy "SaaS template" look with a warm, hand-made design language that matches the app's chunky cartoon icon set (`styles.css` rewritten):
+  - Warm paper background (`#FBF3E4`) with a subtle dot grid; ink (`#23283B`) 2px borders and hard offset "sticker" shadows on cards, buttons, and badges everywhere
+  - New type pairing: Fredoka (display) + Nunito (body), replacing Inter + Space Grotesk
+  - Headline accent restyled as a yellow marker highlight; eyebrows restyled as tilted sticker labels
+  - Hero phone mockup re-skinned to the brand palette — cream screen, yellow/sky tap buttons with ink outlines, hard shadow, slight tilt
+  - Feature cards: left-aligned, per-card pastel icon circles, ±0.4° resting tilt, lift-on-hover
+  - How-it-works band: warm tint with dashed top/bottom borders, colour-coded step number chips
+  - Pricing: featured card filled yellow, annual filled sky, ink pill badges, green ✓ list bullets
+  - FAQ: outlined cards with a yellow +/× chip; footer now a solid ink band
+  - Removed the old AI-template effects: animated drifting gradient backdrop, glow shadows, pulsing dots, glassmorphism nav blur, breathing button animation
+- **Hero layout** — store badges moved up into the hero copy (still `#download`); platform pill strip removed (now covered by the trust line "Free on iOS & Android…"); ghost button swapped for a "See how it works ↓" text link (`index.html`)
+- **Self-hosted fonts** — Fredoka + Nunito latin-subset woff2 files now served from `assets/fonts/` with `@font-face`; removed Google Fonts `<link>`/preconnects from every page (faster first paint, no third-party request)
+- **Join page** re-themed to match (light paper, ink-outlined code card, yellow copy button) (`join/index.html`)
+- **Doc pages** (privacy/terms/support) restyled via the shared stylesheet: dashed-rule headers, yellow callouts, outlined TOC cards; `theme-color` updated to `#FBF3E4` on all pages
+
 ## [Build 21] — 2026-05-27
 - **Google Play launch** — Google Play badge on hero is now a live link (`https://bit.ly/buckoandroid` → `play.google.com/store/apps/details?id=com.thorleypark.bucko`); replaced the `<div class="badge-wrap coming">` wrapper with `<a class="badge-wrap">`, dropped the `.coming` modifier so the badge auto-loses its grayscale/opacity treatment, and removed the COMING SOON overlay. Mirrors the Build 17 App Store launch. v1.4.0 / versionCode 6 is live in 177 countries.
 
