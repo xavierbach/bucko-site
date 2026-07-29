@@ -1,5 +1,8 @@
 # Bucko Site Changelog
 
+## [Build 24] — 2026-07-29
+- **Android App Links live** — replaced the `REPLACE_WITH_SHA256_FROM_EAS_BUILD` placeholder in `.well-known/assetlinks.json` with the real production keystore SHA-256 fingerprint (from `eas credentials -p android`). Family-invite links (`getbucko.com/join/CODE`) now verify and open the Android app directly instead of the browser.
+
 ## [Build 23] — 2026-06-12
 - **Google Play badge self-hosted** — the badge was hotlinked from `upload.wikimedia.org` and failing to load; now served as `assets/playstore-badge.svg` (official artwork, 4 KB), matching the already-local App Store badge. Replaced in the hero and in both `/join/` download rows (`index.html`, `join/index.html`)
 
