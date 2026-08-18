@@ -1,10 +1,10 @@
 # Bucko Site TODO
 
 ## Next
-- [ ] OG social image (currently reuses app icon)
+- [ ] OG social image (currently reuses app icon; 1200×630 recommended for summary_large_image)
 - [ ] Feature graphic 1024×500 PNG for Play Console store listing (`assets/feature-graphic.png`)
 - [ ] Real iPhone + Android device-frame screenshots in the hero (currently a CSS phone mock with placeholder data)
-- [ ] `sitemap.xml` and `robots.txt`
+- [ ] Decide CAD annual price: C$12.99/yr costs more than 12× monthly (C$11.88) — site no longer claims savings for CAD, but the store price itself looks unintended
 
 ## Done
 - [x] **Google Play live link + remove COMING SOON overlay** — `https://bit.ly/buckoandroid` wired to hero badge (Build 21, 2026-05-27)

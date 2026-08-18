@@ -1,5 +1,15 @@
 # Bucko Site Changelog
 
+## [Build 25] — 2026-08-18
+- **Honest per-currency savings** — the Pro Annual "Save 25%" line is now computed from each currency's real prices in `script.js` (25% AUD/NZD, 16% GBP/USD/EUR); for CAD — where annual costs more than 12× monthly — the savings claim is dropped entirely pending a store-price decision.
+- **Stale feature copy fixed** — the "lose my phone" FAQ no longer promises the removed file-export feature and no longer says iCloud sync is "on the way" (it shipped); privacy policy's export-a-JSON-file claims replaced with the real data flows (OS backup, Pro iCloud Backup — now properly disclosed — and Family Sync); terms §4 backup-responsibility sentence updated; legal "Last updated" dates bumped.
+- **"Family Sharing" → "Family Sync" everywhere** — pricing cards, join-page instructions (which pointed at a menu that no longer exists), terms §3/3a/3b, and support setup steps now match the app's naming.
+- **Join page UX** — removed the automatic `bucko://` redirect (it popped Safari's "cannot open the page" error for exactly the users without the app); the download badges and an explicit "Open in Bucko" button now show immediately; clipboard copy gains a legacy fallback; App Store badge links directly to `apps.apple.com/app/id6762508647` instead of bit.ly.
+- **SEO pass** — `sitemap.xml`, `robots.txt` (noindexing /join/), canonical URLs on all indexable pages, JSON-LD `MobileApplication` + `FAQPage` structured data on the home page.
+- **Asset slimming** — nav/footer logos now use a 72px asset instead of the 1024px icon; feature/hero icons resized 512→192px (page weight down ~290KB); proper 180×180 `apple-touch-icon.png`; above-the-fold fonts (Fredoka 600, Nunito 500) preloaded.
+- **Branded 404 page** — replaces the GitHub Pages default; shows Family Sync join help for truncated `/join/...` links, which the AASA now also matches (`/join/*`).
+- **Reduced motion respected** — scroll reveals and the hero counter animation are skipped under `prefers-reduced-motion`.
+
 ## [Build 24] — 2026-07-29
 - **Android App Links live** — replaced the `REPLACE_WITH_SHA256_FROM_EAS_BUILD` placeholder in `.well-known/assetlinks.json` with the real production keystore SHA-256 fingerprint (from `eas credentials -p android`). Family-invite links (`getbucko.com/join/CODE`) now verify and open the Android app directly instead of the browser.
 
