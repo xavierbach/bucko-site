@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#FBF3E4" />
+  <title>Bucko — Page not found</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/png" href="/assets/favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .nf-wrap {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+      text-align: center;
+      background: var(--paper, #FBF3E4);
+    }
+    .nf-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+      border: 2px solid #23283B;
+      margin-bottom: 24px;
+    }
+    .nf-heading {
+      font-family: 'Fredoka', sans-serif;
+      font-size: clamp(1.8rem, 6vw, 2.6rem);
+      font-weight: 600;
+      color: #23283B;
+      margin: 0 0 12px;
+    }
+    .nf-sub {
+      font-size: 1rem;
+      color: #6E6452;
+      margin: 0 auto 28px;
+      max-width: 380px;
+      line-height: 1.6;
+    }
+    .nf-btn {
+      display: inline-block;
+      background: #FFC857;
+      border: 2px solid #23283B;
+      color: #23283B;
+      box-shadow: 0 3px 0 #23283B;
+      font-weight: 800;
+      font-size: 15px;
+      padding: 12px 26px;
+      border-radius: 999px;
+      text-decoration: none;
+    }
+    .nf-hint { font-size: 0.85rem; color: #93886F; margin-top: 24px; line-height: 1.6; }
+    .nf-hint a { color: #2E7D43; font-weight: 700; }
+  </style>
+</head>
+<body style="background:#FBF3E4;margin:0;">
+  <div class="nf-wrap">
+    <img class="nf-icon" src="/assets/icon-160.png" alt="Bucko" />
+    <h1 class="nf-heading">That page did a runner.</h1>
+    <p class="nf-sub">The page you're after doesn't exist — maybe the link was mistyped or is out of date.</p>
+    <a class="nf-btn" href="/">Back to getbucko.com</a>
+    <p class="nf-hint" id="join-hint" style="display:none;">Looking for a family invite? Ask the person who shared it to resend the link, or open Bucko and go to<br /><strong>Settings → Family Sync → Join a Family</strong>.</p>
+  </div>
+  <script>
+    // Truncated or path-style invite links (/join/CODE) land here — show join help.
+    if (window.location.pathname.toLowerCase().indexOf('/join') === 0) {
+      document.getElementById('join-hint').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

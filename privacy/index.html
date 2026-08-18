@@ -13,15 +13,16 @@
   <meta property="og:url" content="https://getbucko.com/privacy/" />
   <meta property="og:type" content="article" />
 
+  <link rel="canonical" href="https://getbucko.com/privacy/" />
   <link rel="icon" type="image/png" href="/assets/favicon.png" />
-  <link rel="apple-touch-icon" href="/assets/icon.png" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
   <header class="nav">
     <div class="wrap nav-inner">
       <a href="/" class="brand">
-        <img src="/assets/icon.png" alt="" width="36" height="36" />
+        <img src="/assets/icon-72.png" alt="" width="36" height="36" />
         <span>BUCKO</span>
       </a>
       <nav class="nav-links" aria-label="Primary">
@@ -38,7 +39,7 @@
       <header class="doc-head">
         <span class="eyebrow">Legal</span>
         <h1>Privacy Policy</h1>
-        <p class="doc-meta">Effective 18 April 2026 · Last updated 21 April 2026</p>
+        <p class="doc-meta">Effective 18 April 2026 · Last updated 18 August 2026</p>
       </header>
 
       <div class="doc-body">
@@ -79,7 +80,7 @@
           <li>Whether each week has been ended and marked as paid.</li>
         </ul>
         <p>This information is stored using <code>AsyncStorage</code>, which on iOS is backed by the App Sandbox and on Android by App-Specific Storage. It is included in your device's standard backup (iCloud Backup on iOS, Google Auto Backup on Android) according to your device's backup settings.</p>
-        <p>We do not have access to this information. It does not leave your device unless <strong>you</strong> choose to export it (see "Your controls" below) or unless your device's backup system uploads it to your own iCloud or Google account.</p>
+        <p>We do not have access to this information. It does not leave your device unless <strong>you</strong> enable an optional sync or backup feature (see "How your data leaves your device" below) or unless your device's backup system uploads it to your own iCloud or Google account.</p>
 
         <h2 id="not-collected">Information we do not collect</h2>
         <p>We want to be explicit. Bucko does <strong>not</strong> collect, transmit, store on our servers, or share with any third party:</p>
@@ -113,8 +114,7 @@
         <h2 id="leaves">How your data leaves your device</h2>
         <p>Your data only leaves your device in the following scenarios, all of which are under your control:</p>
         <ol>
-          <li><strong>You export it.</strong> The Settings screen includes an export action that produces a JSON file containing your app data. You decide where that file goes (Files app, AirDrop, email, Google Drive, etc.). We do not see it.</li>
-          <li><strong>You import it on another device.</strong> If you transfer that JSON file to another device and import it, your data lives on that device too.</li>
+          <li><strong>You enable iCloud Backup (Bucko Pro, iOS).</strong> If you turn on the app's iCloud Backup feature, your app data is stored in <strong>your own iCloud account</strong> using Apple's iCloud key-value storage, under Apple's policies. It goes to your Apple account, not to us — we never see it.</li>
           <li><strong>Your operating system backs it up.</strong> If you have iCloud Backup (iOS) or Google Auto Backup (Android) enabled, your app data is included in those backups according to Apple's and Google's policies. Those backups go to <strong>your</strong> Apple or Google account, not to us.</li>
           <li><strong>You enable Family Sync (Bucko Pro).</strong> If you create or join a family via Settings → Family Sync, your app data is uploaded to and stored on servers operated by Supabase, Inc. (see <a href="#family-sync">Family Sync</a> below). This only happens when you actively opt in to this feature.</li>
         </ol>
@@ -172,7 +172,7 @@
   <footer class="footer">
     <div class="wrap footer-inner">
       <div class="footer-brand">
-        <img src="/assets/icon.png" alt="" width="28" height="28" />
+        <img src="/assets/icon-72.png" alt="" width="28" height="28" />
         <span>BUCKO</span>
       </div>
       <nav class="footer-links" aria-label="Legal">

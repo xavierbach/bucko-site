@@ -1,6 +1,11 @@
 // ── Scroll reveal ──────────────────────────────────────────────────────
+const prefersReducedMotion =
+  window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 const revealEls = document.querySelectorAll('.reveal');
-if ('IntersectionObserver' in window) {
+if (prefersReducedMotion) {
+  revealEls.forEach(el => el.classList.add('in'));
+} else if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver(
     entries => entries.forEach(e => {
       if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
@@ -24,6 +29,10 @@ function animateCounter(el, target, duration) {
 }
 document.querySelectorAll('[data-count]').forEach(el => {
   const target = parseInt(el.dataset.count, 10);
+  if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+    el.textContent = target;
+    return;
+  }
   const io = new IntersectionObserver(entries => {
     if (entries[0].isIntersecting) { animateCounter(el, target, 1800); io.disconnect(); }
   }, { threshold: 0.5 });
@@ -32,12 +41,12 @@ document.querySelectorAll('[data-count]').forEach(el => {
 
 // ── Currency picker ────────────────────────────────────────────────────
 const CURRENCIES = {
-  AUD: { monthly: 'A$1.99',  annual: 'A$17.99',  faqM: 'A$1.99/month',  faqA: 'A$17.99/year'  },
-  NZD: { monthly: 'NZ$1.99', annual: 'NZ$17.99', faqM: 'NZ$1.99/month', faqA: 'NZ$17.99/year' },
-  GBP: { monthly: '£0.99',   annual: '£9.99',    faqM: '£0.99/month',   faqA: '£9.99/year'    },
-  USD: { monthly: '$0.99',   annual: '$9.99',     faqM: '$0.99/month',   faqA: '$9.99/year'    },
-  CAD: { monthly: 'C$0.99',  annual: 'C$12.99',   faqM: 'C$0.99/month',  faqA: 'C$12.99/year'  },
-  EUR: { monthly: '€0.99',   annual: '€9.99',     faqM: '€0.99/month',   faqA: '€9.99/year'    },
+  AUD: { monthly: 'A$1.99',  annual: 'A$17.99',  mNum: 1.99, aNum: 17.99, faqM: 'A$1.99/month',  faqA: 'A$17.99/year'  },
+  NZD: { monthly: 'NZ$1.99', annual: 'NZ$17.99', mNum: 1.99, aNum: 17.99, faqM: 'NZ$1.99/month', faqA: 'NZ$17.99/year' },
+  GBP: { monthly: '£0.99',   annual: '£9.99',    mNum: 0.99, aNum: 9.99,  faqM: '£0.99/month',   faqA: '£9.99/year'    },
+  USD: { monthly: '$0.99',   annual: '$9.99',    mNum: 0.99, aNum: 9.99,  faqM: '$0.99/month',   faqA: '$9.99/year'    },
+  CAD: { monthly: 'C$0.99',  annual: 'C$12.99',  mNum: 0.99, aNum: 12.99, faqM: 'C$0.99/month',  faqA: 'C$12.99/year'  },
+  EUR: { monthly: '€0.99',   annual: '€9.99',    mNum: 0.99, aNum: 9.99,  faqM: '€0.99/month',   faqA: '€9.99/year'    },
 };
 
 function detectCurrency() {
@@ -70,6 +79,16 @@ function applyCurrency(code) {
   if (pa) pa.textContent = c.annual;
   if (fm) fm.textContent = c.faqM;
   if (fa) fa.textContent = c.faqA;
+
+  // The savings claim must match the currency's actual store prices — annual
+  // pricing isn't a uniform 25% off across storefronts.
+  const savingsEl = document.getElementById('price-savings');
+  if (savingsEl) {
+    const pct = Math.round((1 - c.aNum / (c.mNum * 12)) * 100);
+    savingsEl.innerHTML = pct >= 5
+      ? '<strong>Save ' + pct + '%</strong> vs monthly · 7-day free trial'
+      : '7-day free trial · cancel anytime';
+  }
 
   document.querySelectorAll('.currency-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.currency === code);
