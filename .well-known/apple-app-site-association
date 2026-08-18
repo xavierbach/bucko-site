@@ -6,7 +6,11 @@
         "components": [
           {
             "/": "/join/",
-            "comment": "Family sharing join links — https://getbucko.com/join/?code=XXXXXX"
+            "comment": "Family Sync join links — https://getbucko.com/join/?code=XXXXXX"
+          },
+          {
+            "/": "/join/*",
+            "comment": "Path-style join links — https://getbucko.com/join/XXXXXX"
           }
         ]
       }
