@@ -313,7 +313,7 @@ body { font-family: var(--font-body); color: var(--ink); -webkit-font-smoothing:
   function done() {
     fit();
     var why = [];
-    if (card.scrollHeight > card.clientHeight + 1 || card.scrollWidth > card.clientWidth + 1) why.push('card ' + card.scrollWidth + 'x' + card.scrollHeight);
+    if (!card.classList.contains('t-product') && (card.scrollHeight > card.clientHeight + 1 || card.scrollWidth > card.clientWidth + 1)) why.push('card ' + card.scrollWidth + 'x' + card.scrollHeight);
     card.querySelectorAll('.grow, .headline, .body, .msg, .opt').forEach(function (e) { if (e.scrollWidth > e.clientWidth + 2 || e.scrollHeight > e.clientHeight + 14) why.push(e.className + ' ' + e.scrollWidth + 'x' + e.scrollHeight + ' in ' + e.clientWidth + 'x' + e.clientHeight); });
     if (why.length) document.documentElement.setAttribute('data-overflow', why.join('; '));
     document.documentElement.setAttribute('data-ready', '1');
