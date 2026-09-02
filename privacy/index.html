@@ -121,16 +121,16 @@
 
         <h2 id="family-sync">Family Sync (Bucko Pro)</h2>
         <p>Family Sync is an optional Bucko Pro feature that lets two parents (or carers) keep their app data in sync across separate devices — including separate Apple IDs and across iOS and Android.</p>
-        <p><strong>How it works:</strong> one parent creates a family link and receives a 6-character code (e.g. <code>KOALA7</code>). They share that code with the other parent, who enters it in the app. From that point, every time either parent saves data (tapping a reward, editing a chore, etc.), the full app dataset is written to a shared row in a database hosted by <strong>Supabase, Inc.</strong> and delivered to the other parent's device in real time.</p>
+        <p><strong>How it works:</strong> one parent creates a family link and receives a short family code (6–8 characters, e.g. <code>KOALA7DX</code>). They share that code with the other parent, who enters it in the app. From that point, every time either parent saves data (tapping a reward, editing a chore, etc.), the full app dataset is written to a shared row in a database hosted by <strong>Supabase, Inc.</strong> and delivered to the other parent's device in real time.</p>
         <p><strong>What is stored on Supabase servers:</strong></p>
         <ul>
           <li>Child profile data: first name or nickname, chosen icon and colour, points-currency name and icon.</li>
           <li>Chore configuration: chore names, icons, payout amounts, streak thresholds.</li>
           <li>Weekly tap history: which chores have been completed, how many points awarded, whether the week has been paid out.</li>
-          <li>The 6-character family code (used as the row identifier and shared access key).</li>
+          <li>The family code (6–8 characters, used as the row identifier and shared access key).</li>
         </ul>
         <p><strong>What is NOT stored on Supabase servers:</strong> payment information, IP addresses, device identifiers, your name or email, children's last names, dates of birth, location data, photos, or any data other than the app state listed above.</p>
-        <p><strong>Access control:</strong> the 6-character code is the only credential protecting this data. Any device that knows the code can read and write the family's data. Treat it like a shared password and only share it with people you trust.</p>
+        <p><strong>Access control:</strong> the family code is the only credential protecting this data. Any device that knows the code can read and write the family's data. Treat it like a shared password and only share it with people you trust.</p>
         <p><strong>Data retention and deletion:</strong> your family data row persists on Supabase's servers as long as Family Sync is active. You can permanently delete it at any time directly from the app: go to <strong>Settings → Family Sync → Delete Family Sync</strong>. This immediately removes all shared family data from Supabase's servers and disconnects both devices. Your local data on each device is not affected. If you prefer, you can also request deletion by emailing <a href="mailto:hello@getbucko.com">hello@getbucko.com</a> with your family code.</p>
         <p><strong>Supabase as a data processor:</strong> Supabase, Inc. acts as a data processor on our behalf. Supabase stores data in data centres that may be located in the United States or other regions. See <a href="https://supabase.com/privacy">supabase.com/privacy</a> for Supabase's privacy practices.</p>
         <p>If you never use Family Sync, none of the above applies and no chore data is sent to any server.</p>

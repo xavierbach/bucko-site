@@ -193,7 +193,8 @@
     (function () {
       var params = new URLSearchParams(window.location.search);
       var raw = (params.get('code') || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
-      var code = /^[A-Z0-9]{6}$/.test(raw) ? raw : null;
+      // 6-char legacy codes and 8-char codes from newer app versions
+      var code = /^[A-Z0-9]{6,8}$/.test(raw) ? raw : null;
 
       if (code) {
         document.getElementById('join-section').style.display = 'block';
