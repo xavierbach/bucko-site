@@ -107,6 +107,8 @@ def main():
     bad = 0
     for name, o in spec.items():
         res = render_one(chrome, root, name, o, outdir)
+        if not res["ok"]:  # headless timing can be flaky; one retry before failing
+            res = render_one(chrome, root, name, o, outdir)
         print(json.dumps(res)); bad += 0 if res["ok"] else 1
     sys.exit(1 if bad else 0)
 

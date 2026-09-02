@@ -37,7 +37,7 @@ body { font-family: var(--font-body); color: var(--ink); -webkit-font-smoothing:
   background-color: var(--paper);
   background-image: radial-gradient(rgba(35, 40, 59, 0.055) 3px, transparent 3px);
   background-size: 58px 58px;
-  display: flex; flex-direction: column; padding: var(--pad);
+  display: flex; flex-direction: column; padding: var(--pad) var(--pad) 100px;
 }
 .card.r916 { height: 1920px; padding: 250px var(--pad) 320px; }
 .card.roverlay { height: 1920px; background: transparent; padding: 250px var(--pad) 320px; justify-content: center; }
@@ -63,9 +63,9 @@ body { font-family: var(--font-body); color: var(--ink); -webkit-font-smoothing:
 .footer {
   display: flex; align-items: center; gap: 22px; margin-top: 40px; font-weight: 900; font-size: 34px; letter-spacing: 0.02em;
 }
-.footer img { width: 76px; height: 76px; border-radius: 20px; border: 3px solid var(--ink); box-shadow: 4px 5px 0 var(--ink); }
+.footer img { display: block; width: 76px; height: 76px; border-radius: 18px; box-shadow: 4px 5px 0 var(--ink); }
 .sticker {
-  position: absolute; right: 60px; bottom: 60px; width: 300px; height: 300px; border-radius: 50%;
+  position: absolute; right: 72px; bottom: 88px; width: 300px; height: 300px; border-radius: 50%;
   background: var(--accent-soft); border: 4px solid var(--ink); box-shadow: 8px 9px 0 var(--ink);
   display: flex; align-items: center; justify-content: center; transform: rotate(4deg);
 }
@@ -97,7 +97,7 @@ body { font-family: var(--font-body); color: var(--ink); -webkit-font-smoothing:
 .poll-cta { align-self: flex-start; margin-top: 44px; font-weight: 900; font-size: 32px; text-transform: uppercase; letter-spacing: 0.1em; background: var(--ink); color: var(--paper); padding: 16px 30px; border-radius: 999px; transform: rotate(-1deg); }
 
 /* list / carousel */
-.pips { position: absolute; top: 60px; right: 60px; font-weight: 900; font-size: 30px; letter-spacing: 0.08em; background: var(--card); border: 4px solid var(--ink); border-radius: 999px; padding: 12px 26px; box-shadow: 5px 6px 0 var(--ink); transform: rotate(2deg); }
+.pips { position: absolute; top: 64px; right: 72px; font-weight: 900; font-size: 30px; letter-spacing: 0.08em; background: var(--card); border: 4px solid var(--ink); border-radius: 999px; padding: 12px 26px; box-shadow: 5px 6px 0 var(--ink); transform: rotate(2deg); }
 .num { font-family: var(--font-display); font-weight: 600; font-size: 200px; line-height: 1; width: 260px; height: 260px; border-radius: 50%; background: var(--accent); border: 4px solid var(--ink); box-shadow: 8px 9px 0 var(--ink); display: flex; align-items: center; justify-content: center; margin-bottom: 44px; transform: rotate(-3deg); }
 .swipe { align-self: flex-start; margin-top: 40px; font-weight: 900; font-size: 32px; text-transform: uppercase; letter-spacing: 0.12em; background: var(--ink); color: var(--paper); padding: 16px 30px; border-radius: 999px; transform: rotate(-1.5deg); }
 .swipe::after { content: ' \2192'; }
@@ -129,7 +129,7 @@ body { font-family: var(--font-body); color: var(--ink); -webkit-font-smoothing:
 .roverlay .panel { background: var(--paper); border: 5px solid var(--ink); border-radius: 36px; box-shadow: 12px 13px 0 var(--ink); padding: 60px 56px; transform: rotate(-1deg); }
 .roverlay .headline { font-size: 88px; }
 .roverlay .footer { margin-top: 0; position: absolute; left: var(--pad); bottom: 200px; background: var(--card); border: 4px solid var(--ink); border-radius: 999px; padding: 12px 28px 12px 12px; box-shadow: 6px 7px 0 var(--ink); transform: rotate(1.2deg); }
-.roverlay .footer img { border-radius: 999px; box-shadow: none; border-width: 2px; width: 60px; height: 60px; }
+.roverlay .footer img { border-radius: 999px; box-shadow: none; width: 60px; height: 60px; }
 .roverlay .body { font-size: 40px; color: var(--ink); }
 
 .c-yellow { --accent: var(--yellow); --accent-soft: var(--yellow-soft); }
