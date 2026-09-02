@@ -1,5 +1,8 @@
 # Bucko Site Changelog
 
+## [Build 26] — 2026-09-02
+- **Instagram card renderer (`/ig/`)** — new self-contained `ig/card.html` that renders on-brand 4:5 (1080x1350) and 9:16 (1080x1920) social cards from a single `p=` parameter (base64url JSON): `text`, `chat`, `poll`, `list` (carousel slides), `product` (the hero phone mock) and `overlay` (transparent text panel for Reels). Uses the real Paper palette, dot grid, sticker shadows and Fredoka/Nunito, with the seven brand fonts inlined as base64 so it renders identically from getbucko.com, a raw GitHub download or `file://`. `ig/render.py` screenshots specs with headless Chromium (no dependencies) and reports overflow; `ig/preview.html` is a dev gallery; `ig/build.py` regenerates `card.html` from `ig/card.template.html`. Curated icon subset (37 animals, 12 rewards, 8 chores from the app) under `assets/ig/`. Consumed by the automated daily Instagram routine documented in the app repo (`marketing/instagram/`). `/ig/` is `noindex` and disallowed in `robots.txt`; not in the sitemap.
+
 ## [Build 25] — 2026-08-18
 - **Honest per-currency savings** — the Pro Annual "Save 25%" line is now computed from each currency's real prices in `script.js` (25% AUD/NZD, 16% GBP/USD/EUR); for CAD — where annual costs more than 12× monthly — the savings claim is dropped entirely pending a store-price decision.
 - **Stale feature copy fixed** — the "lose my phone" FAQ no longer promises the removed file-export feature and no longer says iCloud sync is "on the way" (it shipped); privacy policy's export-a-JSON-file claims replaced with the real data flows (OS backup, Pro iCloud Backup — now properly disclosed — and Family Sync); terms §4 backup-responsibility sentence updated; legal "Last updated" dates bumped.

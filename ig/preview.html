@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><title>Bucko card preview</title>
+<style>body{margin:0;background:#ddd;font-family:system-ui;padding:16px}h1{font-size:16px}.g{display:flex;flex-wrap:wrap;gap:16px}
+.f{width:270px;height:337.5px;overflow:hidden;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.2)}.f.t{height:480px}
+iframe{width:1080px;height:1350px;border:0;transform:scale(.25);transform-origin:0 0}.f.t iframe{height:1920px}</style></head>
+<body><h1>Bucko card templates (1/4 scale). Edit the specs in this file to try copy.</h1><div class="g" id="g"></div>
+<script>
+var specs = [
+ {t:"text",e:"Hot take",h:"Most chore charts last *three days*.",b:"Not because kids are lazy. Because nobody kept score.",a:"fox",c:"yellow"},
+ {t:"chat",e:"Actual conversation",m:[{w:"k",t:"can I have $5"},{w:"p",t:"What did you do this week?"},{w:"k",t:"I existed"},{w:"p",t:"Check your Bucko."}],b:"Points beat pleading.",a:"rewards/coin",c:"sky"},
+ {t:"poll",e:"Settle it",h:"Pocket money for making the bed.",o:["Fair. It is a job.","Nope. That is just living here."],c:"coral"},
+ {t:"list",n:1,k:5,e:"Save this",h:"5 chores a *five year old* can actually do",cover:1,a:"panda",c:"green"},
+ {t:"list",n:2,k:5,li:"2",h:"Feed the pet",b:"One scoop, same time every day. Streak material.",a:"chores/feed_pet",c:"green"},
+ {t:"product",e:"Sunday is pay day",h:"They did the chores. You *tap once*.",c:"yellow"},
+ {t:"overlay",r:"overlay",e:"Every Sunday",h:"Pay day hits different when they *earned it*."},
+ {t:"text",r:"916",e:"Real talk",h:"Stop asking twice. *Tap once.*",b:"They do the chore. You tap. Done.",a:"auto",c:"sky"}
+];
+function enc(o){return btoa(unescape(encodeURIComponent(JSON.stringify(o)))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');}
+specs.forEach(function(s){var d=document.createElement('div');d.className='f'+(s.r&&s.r!=='45'?' t':'');var f=document.createElement('iframe');f.src='card.html?p='+enc(s);d.appendChild(f);document.getElementById('g').appendChild(d);});
+</script></body></html>

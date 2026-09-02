@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /join/
+Disallow: /ig/
 
 Sitemap: https://getbucko.com/sitemap.xml

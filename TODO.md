@@ -1,6 +1,7 @@
 # Bucko Site TODO
 
 ## Next
+- [ ] Instagram cards: real device screenshots for the `product` template once they exist (it reuses the CSS phone mock today); consider a `story` template for 9:16 Stories
 - [ ] OG social image (currently reuses app icon; 1200×630 recommended for summary_large_image)
 - [ ] Feature graphic 1024×500 PNG for Play Console store listing (`assets/feature-graphic.png`)
 - [ ] Real iPhone + Android device-frame screenshots in the hero (currently a CSS phone mock with placeholder data)
