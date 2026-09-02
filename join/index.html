@@ -9,7 +9,7 @@
   <meta name="robots" content="noindex" />
 
   <link rel="icon" type="image/png" href="/assets/favicon.png" />
-  <link rel="apple-touch-icon" href="/assets/icon.png" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
   <link rel="stylesheet" href="/styles.css" />
   <style>
     .join-wrap {
@@ -137,7 +137,7 @@
 <body style="background:#FBF3E4;margin:0;">
 
   <div class="join-wrap">
-    <img class="join-icon" src="/assets/icon.png" alt="Bucko" />
+    <img class="join-icon" src="/assets/icon-160.png" alt="Bucko" />
 
     <!-- Valid code found in URL -->
     <div id="join-section" style="display:none;width:100%;max-width:400px;">
@@ -147,7 +147,7 @@
       <div class="join-code-card">
         <div class="join-code-label">Your family code</div>
         <div class="join-code-value" id="code-display">——</div>
-        <div class="join-code-hint">Enter this in Bucko → Settings → Family Sharing → Join a Family</div>
+        <div class="join-code-hint">Enter this in Bucko → Settings → Family Sync → Join a Family</div>
         <button class="join-copy-btn" id="copy-btn" onclick="copyCode()">
           <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
             <rect x="5" y="5" width="9" height="9" rx="2"/>
@@ -157,12 +157,12 @@
         </button>
       </div>
 
-      <p class="join-status" id="join-status">Opening Bucko…</p>
+      <p class="join-status"><a class="join-copy-btn" id="open-app-btn" href="#" style="text-decoration:none;">Open in Bucko</a></p>
 
-      <div class="join-downloads" id="join-downloads">
+      <div class="join-downloads visible" id="join-downloads">
         <p class="join-downloads-label">Don't have Bucko yet? Download it free:</p>
         <div class="join-badge-row">
-          <a href="https://bit.ly/4es2STp" aria-label="Download on the App Store">
+          <a href="https://apps.apple.com/app/bucko/id6762508647" aria-label="Download on the App Store">
             <img src="/assets/appstore-badge.svg" alt="App Store" />
           </a>
           <a href="https://play.google.com/store/apps/details?id=com.thorleypark.bucko" aria-label="Get it on Google Play">
@@ -171,15 +171,15 @@
         </div>
       </div>
 
-      <p class="join-manual">Already have Bucko? Open it and go to<br><strong style="color:#23283B;">Settings → Family Sharing → Join a Family</strong><br>and enter the code above.</p>
+      <p class="join-manual">Already have Bucko? Open it and go to<br><strong style="color:#23283B;">Settings → Family Sync → Join a Family</strong><br>and enter the code above.</p>
     </div>
 
     <!-- No code / invalid code -->
     <div class="join-no-code" id="no-code-section">
       <h1 class="join-heading">Family invite link</h1>
-      <p class="join-sub">This link looks incomplete. Ask the person who shared it to send it again — or open Bucko and go to Settings → Family Sharing → Join a Family to enter the code manually.</p>
+      <p class="join-sub">This link looks incomplete. Ask the person who shared it to send it again — or open Bucko and go to Settings → Family Sync → Join a Family to enter the code manually.</p>
       <div class="join-badge-row" style="justify-content:center;margin-top:8px;">
-        <a href="https://bit.ly/4es2STp" aria-label="Download on the App Store">
+        <a href="https://apps.apple.com/app/bucko/id6762508647" aria-label="Download on the App Store">
           <img src="/assets/appstore-badge.svg" alt="App Store" height="48" />
         </a>
         <a href="https://play.google.com/store/apps/details?id=com.thorleypark.bucko" aria-label="Get it on Google Play">
@@ -193,47 +193,54 @@
     (function () {
       var params = new URLSearchParams(window.location.search);
       var raw = (params.get('code') || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
-      var code = /^[A-Z0-9]{6}$/.test(raw) ? raw : null;
+      // 6-char legacy codes and 8-char codes from newer app versions
+      var code = /^[A-Z0-9]{6,8}$/.test(raw) ? raw : null;
 
       if (code) {
         document.getElementById('join-section').style.display = 'block';
         document.getElementById('code-display').textContent = code;
 
-        // Attempt to open the app via custom scheme.
-        // If the app is installed iOS/Android will intercept it; otherwise it silently fails.
-        var appUrl = 'bucko://join/' + code;
-        var iframe = document.createElement('iframe');
-        iframe.style.display = 'none';
-        iframe.src = appUrl;
-        document.body.appendChild(iframe);
-
-        // Also try direct location change for Android
-        setTimeout(function () { window.location.href = appUrl; }, 100);
-
-        // After a short delay show the status update and download links
-        setTimeout(function () {
-          var status = document.getElementById('join-status');
-          status.textContent = 'App didn\u2019t open? Download Bucko or enter the code manually.';
-          status.className = 'join-status';
-          document.getElementById('join-downloads').classList.add('visible');
-        }, 1800);
+        // If Bucko is installed, the universal/app link normally opens the app
+        // before this page ever renders. Reaching this page usually means the
+        // app is NOT installed, so we no longer auto-fire the bucko:// scheme \u2014
+        // on iOS that popped a "Safari cannot open the page" error at exactly
+        // the wrong moment. Opening the app stays available as a deliberate tap.
+        document.getElementById('open-app-btn').href = 'bucko://join/' + code;
       } else {
         document.getElementById('no-code-section').style.display = 'block';
       }
     })();
 
+    function markCopied() {
+      var btn = document.getElementById('copy-btn');
+      var label = document.getElementById('copy-label');
+      btn.classList.add('copied');
+      label.textContent = 'Copied!';
+      setTimeout(function () {
+        btn.classList.remove('copied');
+        label.textContent = 'Copy code';
+      }, 2000);
+    }
+
     function copyCode() {
       var code = document.getElementById('code-display').textContent;
-      navigator.clipboard.writeText(code).then(function () {
-        var btn = document.getElementById('copy-btn');
-        var label = document.getElementById('copy-label');
-        btn.classList.add('copied');
-        label.textContent = 'Copied!';
-        setTimeout(function () {
-          btn.classList.remove('copied');
-          label.textContent = 'Copy code';
-        }, 2000);
-      });
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(code).then(markCopied, function () { legacyCopy(code); });
+      } else {
+        legacyCopy(code);
+      }
+    }
+
+    function legacyCopy(code) {
+      var ta = document.createElement('textarea');
+      ta.value = code;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'absolute';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); markCopied(); } catch (e) {}
+      document.body.removeChild(ta);
     }
   </script>
 </body>
