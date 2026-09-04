@@ -294,7 +294,7 @@ p  { margin: 0; text-wrap: pretty; }
 }
 .hero-mascot {
   position: absolute;
-  left: calc(50% - 366px);
+  left: calc(50% - 406px);
   bottom: -18px;
   width: 236px;
   height: 236px;
